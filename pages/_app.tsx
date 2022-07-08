@@ -1,3 +1,5 @@
+import '../styles/complete-checkout.css';
+import '../styles/checkout.css';
 import '../styles/detail.css';
 import '../styles/homepage.css';
 import '../styles/utilities.css';

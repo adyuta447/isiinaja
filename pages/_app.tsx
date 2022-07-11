@@ -1,3 +1,4 @@
+import '../styles/sign-up-success.css';
 import '../styles/sign-up-photo.css';
 import '../styles/sign-up.css';
 import '../styles/sign-in.css';

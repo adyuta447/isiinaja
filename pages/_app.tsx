@@ -1,3 +1,4 @@
+import '../styles/transactions.css';
 import '../styles/overview.css';
 import '../styles/sidebar.css';
 import '../styles/404-not-found.css';

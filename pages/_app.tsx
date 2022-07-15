@@ -1,3 +1,4 @@
+import '../styles/navbar-log-in.css';
 import '../styles/edit-profile.css';
 import '../styles/transactions-detail.css';
 import '../styles/transactions.css';

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Menu from './Menu';
+import Auth from './Auth';
 
 export default function index() {
   return (
@@ -28,17 +29,7 @@ export default function index() {
               <Menu title="Rewards" />
               <Menu title="Discover" />
               <Menu title="Global Rank" />
-              <li className="nav-item my-auto">
-                <a
-                  className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
-                  href="./src/sign-in.html"
-                  role="button"
-                >
-                  Sign
-                  In
-
-                </a>
-              </li>
+              <Auth isLogin />
             </ul>
           </div>
         </div>

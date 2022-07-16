@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 interface AuthProps {
-    isLogin: boolean;
+    isLogin?: boolean;
 }
 
-export default function Auth(props: AuthProps) {
+export default function Auth(props: Partial<AuthProps>) {
   const { isLogin } = props;
   if (isLogin) {
     return (
@@ -27,12 +29,14 @@ export default function Auth(props: AuthProps) {
           </a>
 
           <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
-            <li><a className="dropdown-item text-lg color-palette-2" href="#">My Profile</a></li>
-            <li><a className="dropdown-item text-lg color-palette-2" href="#">Wallet</a></li>
+            <li><Link href="/member"><a className="dropdown-item text-lg color-palette-2">My Profile</a></Link></li>
+            <li><Link href="/"><a className="dropdown-item text-lg color-palette-2">Wallet</a></Link></li>
             <li>
-              <a className="dropdown-item text-lg color-palette-2" href="#">Account Settings</a>
+              <Link href="/member/edit-profile">
+                <a className="dropdown-item text-lg color-palette-2">Account Settings</a>
+              </Link>
             </li>
-            <li><a className="dropdown-item text-lg color-palette-2" href="#">Log Out</a></li>
+            <li><Link href="/sign-in"><a className="dropdown-item text-lg color-palette-2">Log Out</a></Link></li>
           </ul>
         </div>
       </li>
@@ -40,15 +44,16 @@ export default function Auth(props: AuthProps) {
   }
   return (
     <li className="nav-item my-auto">
-      <a
-        className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
-        href="./src/sign-in.html"
-        role="button"
-      >
-        Sign
-        In
+      <Link href="/sign-in">
+        <a
+          className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
+          role="button"
+        >
+          Sign
+          In
 
-      </a>
+        </a>
+      </Link>
     </li>
   );
 }
